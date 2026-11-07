@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import todoRoutes from "./routes/todoRoutes.js";
+import verifyToken from "./middlewares/authMiddleware.js";
 
 dotenv.config();
 const app = express();
@@ -29,7 +30,7 @@ app.get("/", (req, res) => {
 
 //ROUTES
 app.use("/auth", authRoutes);
-app.use("/todos", todoRoutes);
+app.use("/todos", verifyToken, todoRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

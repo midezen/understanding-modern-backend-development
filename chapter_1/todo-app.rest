@@ -19,3 +19,32 @@ Content-Type: application/json
     "password": "12345"
 }
 
+### GET TODOS
+GET http://localhost:5000/todos/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImlhdCI6MTc5NDAzODE3NCwiZXhwIjoxNzk0MTI0NTc0fQ.EpzTcAVap_TfTF0pvalJsJyXdHbw_OXXyPbgpzPlZxQ
+
+### ADD TODO
+POST http://localhost:5000/todos/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImlhdCI6MTc5NDAzODE3NCwiZXhwIjoxNzk0MTI0NTc0fQ.EpzTcAVap_TfTF0pvalJsJyXdHbw_OXXyPbgpzPlZxQ
+
+{
+   "task": "This is your first task"
+}
+
+### UPDATE TODO
+PUT http://localhost:5000/todos/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImlhdCI6MTc5NDAzODE3NCwiZXhwIjoxNzk0MTI0NTc0fQ.EpzTcAVap_TfTF0pvalJsJyXdHbw_OXXyPbgpzPlZxQ
+
+{
+   "completed": 1
+}
+
+### DELETE TODO
+DELETE  http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImlhdCI6MTc5NDAzODE3NCwiZXhwIjoxNzk0MTI0NTc0fQ.EpzTcAVap_TfTF0pvalJsJyXdHbw_OXXyPbgpzPlZxQ
+
+
+
+
